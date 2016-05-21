@@ -2,4 +2,6 @@
 
 ## Run
 
-    $> sbt run
+    $> sbt fastOptJS
+    
+Open the index-dev.html in your favorite browser.
