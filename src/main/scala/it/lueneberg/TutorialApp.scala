@@ -4,15 +4,19 @@ import scala.scalajs.js.JSApp
 import org.scalajs.dom
 import dom.document
 
+import org.scalajs.dom
+import dom.document
+import scalatags.JsDom.all._
+
 object TutorialApp extends JSApp {
   def main(): Unit = {
-    appendPar(document.body, "Hello World")
-  }
+    document.body.appendChild(
 
-  def appendPar(targetNode: dom.Node, text: String): Unit = {
-    val parNode = document.createElement("p")
-    val textNode = document.createTextNode(text)
-    parNode.appendChild(textNode)
-    targetNode.appendChild(parNode)
+      div(
+        h1(id:="header", "Hello World!"),
+        p("This was written in a typesafe way!")
+      ).render
+
+    )
   }
 }
